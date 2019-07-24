@@ -1,0 +1,13 @@
+
+div{
+	text-align: center;
+}
+
+h3{
+	font-style: italic;
+	font-family: monospace;
+}
+
+ul{
+	list-style-position: inside;
+}

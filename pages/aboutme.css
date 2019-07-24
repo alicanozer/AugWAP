@@ -1,0 +1,12 @@
+
+div{
+	text-align: left;
+}
+
+h1, h2 {
+	font-family: fantasy;
+	color: rgb(55,55,155);
+}
+li {
+	font-family: monospace;
+}

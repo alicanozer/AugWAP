@@ -1,0 +1,59 @@
+body{
+background-image:url("../images/background.png");	
+font-size:8pt;
+font-family:Verdana, Tahoma,sans serif;
+}
+#banner{
+	background-image:url("../images/bannerbg.png");	
+	background-repeat:repeat-x;
+}
+#moviename{
+	text-align: center;
+	font-size:24pt;
+	font-family: Tahoma, Verdana,Sans Serif;
+	text-shadow: 3px 3px  #999999;
+}
+#content{
+	width:800px;
+	margin:auto;
+	border:4px solid gray;
+	border-radius:20px;
+	overflow:auto;
+}
+#left{
+	width:550px;
+	float:left;
+}
+#right{
+	margin-left:550px;
+	background-color:#A2B964;
+	font-family:arial,sans serif;
+	font-size:8pt;
+}
+#rot{
+	background-image:url("../images/rbg.png");
+	background-repeat:repeat-x;
+}
+#rating{
+	font-size:48pt;
+	color:red;
+}
+#firstreview{
+	margin-left:10px;
+	width:45%;
+	float:left;
+}
+#secondreview{	
+	margin-left:280px;
+	margin-right:10px;
+	
+}
+.review{
+	border:2px solid gray;
+	border-radius:10px;
+	background-color:#E8DC9B;
+	
+}
+.dtplace{
+	font-size:10pt;
+}

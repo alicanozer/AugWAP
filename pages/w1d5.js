@@ -1,5 +1,7 @@
 
-
+/*
+* Returns max number of two elements
+*/
 function max(a,b){
 	if (a>=b) {
 		return a;
@@ -8,19 +10,26 @@ function max(a,b){
 	}
 }
 
+/*
+* Returns max number of 3 elements
+*/
 function maxOfThree(a,b,c){
 	return max(a,max(b,c));
 }
 
+/*
+* Returns true if letter is vowel, false otherwise
+*/
 function isVowel(c){
-	if (c==='A' || c==='E' ||c==='I' ||c==='O' ||c==='U' ||
-		c==='a' || c==='e' ||c==='i' ||c==='o' ||c==='u') {
+	if (c==='A' || c==='E' ||c==='I' ||c==='O' ||c==='U' || c==='a' || c==='e' ||c==='i' ||c==='o' ||c==='u') {
 		return true;
-} else {
-	return false;
+	} else {
+		return false;
+	}
 }
-}
-
+/*
+* Returns sum of all elements in given array
+*/
 function sum(a){
 	var sum = 0;
 
@@ -30,7 +39,9 @@ function sum(a){
 	
 	return sum;
 }
-
+/*
+* Returns multiply of all elements in given array
+*/
 function multiply(a){
 	var mul = 1;
 
@@ -40,7 +51,9 @@ function multiply(a){
 	
 	return mul;
 }
-
+/*
+* Returns reverse of given string
+*/
 function reverse(a){
 	var rev="";
 
@@ -50,7 +63,9 @@ function reverse(a){
 
 	return rev;
 }
-
+/*
+* Returns longest word in given array of string
+*/
 function findLongestWord(words){
 	var longest;
 	var len=0;
@@ -64,7 +79,9 @@ function findLongestWord(words){
 
 	return longest;
 }
-
+/*
+* Returns array of words that length is greater than given integer l
+*/
 function filterLongWords(words, l){
 	let res = [];
 
@@ -76,6 +93,9 @@ function filterLongWords(words, l){
 
 	return res;
 }
+/*
+* Estimates given elements are equal or including same things
+*/
 function isSucceded(a, b){
 	if (Array.isArray(a) && Array.isArray(b) && a.length === b.length) {
 		for (var i = 0; i < a.length; i++) {
@@ -95,7 +115,9 @@ function isSucceded(a, b){
 	return "TEST FAILED";
 	
 }
-
+/*
+* Prints result to console and list in web view
+*/
 function printResult(w){
 	var node = document.createElement("LI");
 	var textnode = document.createTextNode(w);
@@ -104,6 +126,9 @@ function printResult(w){
 
 	console.log(w);
 }
+/*
+* Called when page is loaded to call all test cases
+*/
 function main(){
 	printResult("Output of max(20,10) should be "+max(20,10)+". So, "+isSucceded(max(20,10),20));
 	printResult("Output of maxOfThree(20,100,5) should be "+maxOfThree(20,100,5)+". So, "+isSucceded(maxOfThree(20,100,5),100));

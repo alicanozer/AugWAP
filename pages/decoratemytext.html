@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
 		<title>Text Decorator</title>
 		<link href="decoratemytext.css" type="text/css" rel="stylesheet" />
@@ -9,10 +9,10 @@
 		many useful functions which we need.
 		Please don't remove this link or change its URL; leave it as-is!
 		-->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 
 		<!-- link to your script file here -->
-		<script src="decoratemytext.js" type="text/javascript"></script>
+		<script src="decoratemytext.js"></script>
 		
 	</head>
 
@@ -27,15 +27,28 @@
 	<fieldset>
 		<legend>Text</legend>
 		<textarea name="textarea" id="myTextArea" cols="30" rows="4" style="font-size: 12pt">Line1</textarea><br/>
-		<input type="button" value="Igpay Atinlay" onclick="convert2pl()"><br/>
-		<input type="button" value="Malkovitch" onclick="malkovitch()">
+		<input type="button" id="buttonPL" value="Igpay Atinlay" ><br/>
+		<input type="button" id="buttonMalkovitch" value="Malkovitch">
 	</fieldset>
 
 	<fieldset>
 		<legend>Decoration</legend>
-		<input type="button" value="Bigger Decorations!" onclick="buttonClicked()"><br/>
-		<input type="checkbox" id="myCheckbox" onchange="checkboxChanged()">Bling!
+		<input type="button" id="buttonBiggerDec" value="Bigger Decorations!"><br/>
+		<input type="checkbox" id="myCheckbox">Bling!
 	</fieldset>
-		
+
+
+        <a href="http://validator.w3.org/check/referer">
+            <img src="http://mumstudents.org/cs472/2014-09/images/w3c-html.png" alt="html validator"/>
+        </a>
+
+        <a href="https://jigsaw.w3.org/css-validator/check/referer">
+            <img src="http://mumstudents.org/cs472/2014-09/images/w3c-css.png" alt="css validator"/>
+        </a>
+
+        <a href="http://www.jshint.com/check">
+            <img src="http://mumstudents.org/cs472/2014-09/images/w3c-js.png" alt="js validator"/>
+        </a>
+
 	</body>
 </html>

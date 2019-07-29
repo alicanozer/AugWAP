@@ -1,5 +1,3 @@
-
-
 /*jshint esversion: 6 */
 window.onload = function () {
     "use strict";
@@ -36,7 +34,6 @@ window.onload = function () {
         animationSet = ANIMATIONS[animationSelector.selectedIndex].split("=====\n");
         timer = setInterval(animate, animationInterval);
     }
-
     function stopButtonClicked() {
         startButton.disabled = false;
         stopButton.disabled = true;
@@ -45,16 +42,13 @@ window.onload = function () {
         textArea.value = ANIMATIONS[animationSelector.selectedIndex];
         animationIndex=0;
     }
-
     function animationChanged() {
         textArea.value = ANIMATIONS[animationSelector.selectedIndex];
         animationSet = ANIMATIONS[animationSelector.selectedIndex].split("=====\n");
     }
-
     function fontsizeChanged() {
         textArea.style.fontSize = FONTSIZE[fontSizeSelector.selectedIndex];
     }
-
     function speedChanged() {
         if (speedSelector.checked){
             animationInterval = SPEEDS[0];
@@ -67,8 +61,6 @@ window.onload = function () {
             timer = setInterval(animate, animationInterval);
         }
     }
-
-
     function animate(){
         textArea.value = animationSet[animationIndex%animationSet.length];
         animationIndex++;

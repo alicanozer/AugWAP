@@ -2,7 +2,6 @@
 window.onload = function () {
     "use strict";
 
-
     document.getElementById("buttonPL").onclick = convert2pl;
     document.getElementById('buttonMalkovitch').onclick = convertMalkovitch;
     document.getElementById("buttonBiggerDec").onclick = BDButtonClicked;

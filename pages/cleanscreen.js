@@ -1,5 +1,4 @@
 
-
 $(document).ready(function () {
     "use strict";
 
@@ -12,6 +11,10 @@ $(document).ready(function () {
     let counter;
 
     $("#circle-start").on("click", setCircle);
+
+    /**
+     * this function set circle(s) given initial values and starts timer
+     */
     function setCircle(){
 
         initialWidth = parseInt($("input[name=width]").val());
@@ -32,6 +35,8 @@ $(document).ready(function () {
             circle.css("border-radius", initialWidth+"px");
 
             circle.on("click", removeCircle);
+            circle.on("mouseover", mouseOverCircle);
+            circle.on("mouseout", mouseOutCircle);
             $("#circle-div").append(circle);
             circles.push(circle);
         }
@@ -39,6 +44,9 @@ $(document).ready(function () {
         timer = window.setInterval(growCircle, interval);
     }
 
+    /**
+     * timer function circle growing continiously by given value
+     */
     function growCircle() {
         console.log("growCircle");
         let size = parseInt(circles[0].css("width"));
@@ -50,15 +58,33 @@ $(document).ready(function () {
             circle.css("height", newsize);
             circle.css("border-radius", newsize);
         }
-
     }
 
+    /**
+     * when user click to circle circle will be removed
+     */
     function removeCircle() {
         console.log("removeCircle");
         this.remove();
         if(--counter === 0){
             clearInterval(timer);
+            circles = [];
+            timer = null;
         }
+    }
+
+    /**
+     * when mouse over the circle, its opacity will be half
+     */
+    function mouseOverCircle() {
+        $(this).css("opacity", "0.5");
+    }
+
+    /**
+     * when mouse exit to circle opacity will be old value
+     */
+    function mouseOutCircle() {
+        $(this).css("opacity", "1");
     }
 
 });

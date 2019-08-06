@@ -4,6 +4,9 @@ $(document).ready(function () {
 
     $("#start").click(function () {
         start = true;
+        $("div#maze .boundary").each(function (idx, el) {
+            $(el).removeClass("youlose");
+        });
         $("#status").html("Started, go on...");
     });
 
